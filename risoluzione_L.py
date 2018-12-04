@@ -7,8 +7,12 @@ def risolviL(L,b):
         l_current = 0
         for x in range(0,3):
             if x != i:
-                l_current += L.item((i,x))
-        result.append(b.item(i) + l_current)
+                if i == 0 :
+                    value = 0
+                else:
+                    value = result[i-1]
+                l_current += L.item((i,x))*-1*value
+        result.append(b.item(i)*L.item((i,i)) + l_current)
     return result
 
 
