@@ -28,22 +28,22 @@ tol=1e-15
 #print('valore {:15.10f} niter {:3d} '.format(a[0],a[1]))
 
 
-def simpson(f, a, b, n):
-    h=(b-a)/n
-    k=0.0
-    x=a + h
-    for i in range(1,n/2 + 1):
-        k += 4*f(x)
-        x += 2*h
-
-    x = a + 2*h
-    for i in range(1,n/2):
-        k += 2*f(x)
-        x += 2*h
-    return (h/3)*(f(a)+f(b)+k)
-
+def simpson(f,a,b,n):
+    h = (b-a)/n
+    x0 = a
+    j = 1
+    sum1 =0
+    sum2 = 0
+    enneMezzi = n/2
+    while(j < enneMezzi):
+        sum1 += f(a+2*j*h)
+        sum2 += f(a+2*(j-1)*h)
+        j+=1
+    sum2 += f(a+2*(enneMezzi-1)*h)
+    In = (h/3)*(f(x0)+2*sum1+4*sum2)+f(a+n*h)
+    return In
 def f(x): return mt.sin(x)
-sin = simpson(f,0,mt.pi,128)
+sin = simpson(f,-1,1,128)
 
 
 print(sin)

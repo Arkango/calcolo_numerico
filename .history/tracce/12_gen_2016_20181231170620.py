@@ -41,9 +41,8 @@ def simpson(f, a, b, n):
         k += 2*f(x)
         x += 2*h
     return (h/3)*(f(a)+f(b)+k)
-
 def f(x): return mt.sin(x)
-sin = simpson(f,0,mt.pi,128)
+sin = simpson(f,0,math.pi,128)
 
 
 print(sin)
