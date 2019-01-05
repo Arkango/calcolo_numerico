@@ -16,7 +16,7 @@ def radCubic(s,tol,maxIter):
         return False
     x0 = s
     niter = 0
-    valoreFisso = 1/3
+    valoreFisso = float(1/3)
     valoreCalcolatO = x0 ** (1. / 3)
     while  (x0-valoreCalcolatO)/x0 > tol and niter < maxIter:       
         x1 = valoreFisso*(2*x0+(s/(x0**2)))
@@ -24,10 +24,10 @@ def radCubic(s,tol,maxIter):
         niter += 1
     return(x0,niter)
 tol=1e-15
-a = radCubic(1234,tol,20)
-print('valore {:15.10f} niter {:3d} '.format(a[0],a[1]))
+#a = radCubic(1234,tol,20)
+#print('valore {:15.10f} niter {:3d} '.format(a[0],a[1]))
 
-"""
+
 def simpson(f, a, b, n):
     h=(b-a)/n
     k=0.0
@@ -46,4 +46,4 @@ def f(x): return mt.sin(x)
 sin = simpson(f,0,mt.pi,128)
 
 
-print(sin) """
+print(sin)

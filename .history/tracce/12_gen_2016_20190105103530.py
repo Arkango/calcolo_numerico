@@ -24,10 +24,10 @@ def radCubic(s,tol,maxIter):
         niter += 1
     return(x0,niter)
 tol=1e-15
-a = radCubic(1234,tol,20)
-print('valore {:15.10f} niter {:3d} '.format(a[0],a[1]))
+#a = radCubic(1234,tol,20)
+#print('valore {:15.10f} niter {:3d} '.format(a[0],a[1]))
 
-"""
+
 def simpson(f, a, b, n):
     h=(b-a)/n
     k=0.0
@@ -46,4 +46,4 @@ def f(x): return mt.sin(x)
 sin = simpson(f,0,mt.pi,128)
 
 
-print(sin) """
+print(sin)

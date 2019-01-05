@@ -28,4 +28,4 @@ def trapezi(f,a,b,n):
     return somma
 
 def f(x): return np.sqrt(1-x**2)
-print(trapezi(f,0,1,2048))
+print(trapezi(f,0,1,256))

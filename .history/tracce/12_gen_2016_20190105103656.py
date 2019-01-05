@@ -46,4 +46,4 @@ def f(x): return mt.sin(x)
 sin = simpson(f,0,mt.pi,128)
 
 
-print(sin) """
+print(sin)

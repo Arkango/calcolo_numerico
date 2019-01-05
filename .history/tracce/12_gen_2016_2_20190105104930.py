@@ -23,9 +23,9 @@ def trapezi(f,a,b,n):
     for i in range(1,n):
         somma1enne += f(a+(i*h))
     
-    somma = (h/2)*(f(x0)+(2*somma1enne)+f(a+n*h))
+    somma = (h/2)*[f(x0)+(2*somma1enne)+f(a+n*h)]
 
     return somma
 
 def f(x): return np.sqrt(1-x**2)
-print(trapezi(f,0,1,2048))
+print(trapezi(f,0,1,4))
