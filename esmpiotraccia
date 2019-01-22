@@ -1,0 +1,14 @@
+
+
+def traub(f,...,n):
+  ...
+  return valore
+
+n=4 #serve nel metodo di traub
+primaIterata = traub(....,n)
+error = primaIterata +1
+
+while abs(error -primaIterata) > 1e-5:
+  error = primaIterata
+  n *= 2
+  primaIterata = traub(...,n)
